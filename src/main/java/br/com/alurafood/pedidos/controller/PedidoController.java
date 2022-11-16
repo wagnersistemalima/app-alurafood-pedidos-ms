@@ -8,6 +8,7 @@ import br.com.alurafood.pedidos.service.PedidoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -140,5 +141,9 @@ public class PedidoController {
 
         return ResponseEntity.ok().build();
 
+    }
+    @GetMapping("/port")
+    public String retornaPorta(@Value("${local.server.port}") String port) {
+        return String.format("Requisição respondida pela instancia execultando na porta %s ", port);
     }
 }
