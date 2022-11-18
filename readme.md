@@ -9,7 +9,7 @@
 | :sparkles: Nome        | **Microsserviço de pedido**
 | :label: Tecnologias | SpringBoot, Java, MySQL, Maven
 | :rocket: URL         | https://url-deploy.com.br
-| :fire: Desafio     | https://7daysofcode.io/matricula/java
+| :fire: Desafio     | https://www.alura.com.br/curso-online-microsservicos-implementando-java-spring
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![alter-text](./images/ms-vitrine.png)
