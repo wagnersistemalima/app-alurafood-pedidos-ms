@@ -9,3 +9,31 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+
+  application:
+    name: pedido-ms
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 4
+          initial-interval: 5000
+          multiplier: 2
+          max-interval: 300000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
+
+  instance:
+    instance-id: ${spring:application:name}:${random:int}
+
+server:
+  port: 0
